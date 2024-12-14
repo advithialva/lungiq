@@ -1,4 +1,4 @@
-# Luniq: Lung Disease Prediction  
+# LungIQ: Lung Disease Prediction  
 
 <table>
 <tr>
@@ -6,7 +6,7 @@
 <img src="static/logo.png" alt="Your Logo" width="200%" height="200%">
 </td>
 <td>
-<b><i>Luniq is an innovative web-based platform designed to analyze X-ray images and predict whether a person is suffering from pneumonia, COVID-19, or is in a normal condition. Leveraging the power of deep learning and CNN-based models, Luniq delivers fast, reliable, and accurate results to assist healthcare professionals and individuals in early detection and diagnosis of lung diseases.</b>
+<b><i>LungIQ is an innovative web-based platform designed to analyze X-ray images and predict whether a person is suffering from pneumonia, COVID-19, or is in a normal condition. Leveraging the power of deep learning and CNN-based models, Luniq delivers fast, reliable, and accurate results to assist healthcare professionals and individuals in early detection and diagnosis of lung diseases.</b>
 </td>
 </tr>
 </table>
@@ -25,7 +25,7 @@
   Along with disease predictions, Luniq provides valuable insights about the diseases, including symptoms, progression, and treatment options.
 
 ## How To Use
-### 1. Visit the Luniq platform  
+### 1. Visit the LungIQ platform  
 Capture a clear, high-quality X-ray image of the patient's lungs. Ensure the image is well-lit and sharp to enhance prediction accuracy.
 
 ### 2. Upload the X-ray Image  
@@ -36,23 +36,25 @@ Once the image is processed, LungIQ provides the prediction result, indicating w
 
 
 
-## Technologies Behind Luniq
+## Technologies Behind LungIQ
 - ### Disease Prediction:   
   | Name        | Link                                                    |
   |-------------|--------------------------------------------------------|
   |Python       |[![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)](https://python.org)|
   |TensorFlow   |[![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)](https://www.tensorflow.org)|  
-  |Kaggle   |![Kaggle](https://img.shields.io/badge/Kaggle-%2300B8D9.svg?style=for-the-badge&logo=kaggle&logoColor=white) | [Kaggle](https://www.kaggle.com) |
+  |Kaggle       |[![Kaggle](https://img.shields.io/badge/Kaggle-%2300B8D9.svg?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com) |
   |Numpy        |[![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org)|  
   |Flask        |[![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/en/2.3.x)|  
 
-- ### Web Development:  
+- ### Web Development:
   | Name        | Link                                                   |
   |-------------|--------------------------------------------------------|
- |HTML5   |![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) | [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML) |
-| CSS3     |![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) | [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS) |
-| JavaScript|![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=white) | [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) |
-|TailwindCSS|![TailwindCSS](https://img.shields.io/badge/TailwindCSS-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) |
+  | HTML5       | [![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML) |
+  | CSS3        | [![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS) |
+  | JavaScript  | [![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/JavaScript) |
+  | TailwindCSS | [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/) |
+
+
 - ### Miscellaneous:   
   | Name        | Link                                                   |
   |-------------|--------------------------------------------------------|
@@ -60,7 +62,7 @@ Once the image is processed, LungIQ provides the prediction result, indicating w
   |Vercel       |[![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com)|  
   |npm          |[![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com)|
 
-## Setup Luniq Locally
+## Setup LungIQ Locally
 ### 1. Install Dependencies
 Make sure you have **Python 3** and **MongoDB** installed. Then, follow these steps:
 
