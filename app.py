@@ -17,8 +17,9 @@ db = client['LungIQ']
 contacts_collection = db['contact']
 
 # Load your pre-trained model and label encoder
-model = load_model('models/CNN_Covid19_Xray_Version.h5')
-le = pickle.load(open("models/Label_encoder.pkl", 'rb'))
+model_path = os.path.join(os.getcwd(), "models", "CNN_Covid19_Xray_Version.h5")
+model = load_model(model_path)
+le = pickle.load(open(os.path.join(os.getcwd(), "models", "Label_encoder.pkl"), 'rb'))
 
 # Path to store uploaded images
 UPLOAD_FOLDER = 'uploads'
