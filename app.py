@@ -19,7 +19,8 @@ contacts_collection = db['contact']
 # Load your pre-trained model and label encoder
 model_path = os.path.join(os.getcwd(), "models", "CNN_Covid19_Xray_Version.h5")
 model = load_model(model_path)
-le = pickle.load(open(os.path.join(os.getcwd(), "models", "Label_encoder.pkl"), 'rb'))
+le_path = os.path.join(os.getcwd(), "models", "Label_encoder.pkl")
+le = pickle.load(open(le_path, 'rb'))
 
 # Path to store uploaded images
 UPLOAD_FOLDER = 'uploads'
@@ -110,5 +111,6 @@ def upload_file():
                                predicted_label=predicted_label,
                                confidence_score=confidence_score)
 
-if __name__ == '__main__':
-    app.run(debug=True) 
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
