@@ -54,14 +54,6 @@ Once the image is processed, LungIQ provides the prediction result, indicating w
   | JavaScript  | [![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/JavaScript) |
   | TailwindCSS | [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/) |
 
-
-- ### Miscellaneous:   
-  | Name        | Link                                                   |
-  |-------------|--------------------------------------------------------|
-  |Git/GitHub   |[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com)|  
-  |Vercel       |[![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com)|  
-  |npm          |[![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com)|
-
 ## Setup LungIQ Locally
 ### 1. Install Dependencies
 Make sure you have **Python 3** and **MongoDB** installed. Then, follow these steps:
