@@ -11,7 +11,8 @@ from werkzeug.utils import secure_filename
 app = Flask(__name__)
 
 # MongoDB connection
-client = MongoClient("mongodb://localhost:27017/")
+mongo_uri = os.getenv("MONGODB_URI", "mongodb://localhost:27017/")
+client = MongoClient(mongo_uri)
 db = client['LungIQ']
 contacts_collection = db['contact']
 

@@ -5,3 +5,7 @@ services:
     plan: free
     buildCommand: ""
     startCommand: "python app.py"
+    envVars:
+      - key: MONGODB_URI
+        value: "mongo_uri = os.getenv("MONGODB_URI", "mongodb://localhost:27017/")
+client = MongoClient(mongo_uri)
