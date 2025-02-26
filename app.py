@@ -8,7 +8,7 @@ from tensorflow.keras.models import load_model
 from werkzeug.utils import secure_filename
 
 # Initialize Flask app
-app = Flask(__name__)
+app = Flask(__name__,static_folder='models')
 
 # MongoDB connection
 mongo_uri = os.getenv("MONGODB_URI", "mongodb://localhost:27017/")
@@ -112,4 +112,4 @@ def upload_file():
                                confidence_score=confidence_score)
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 3000)))
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
