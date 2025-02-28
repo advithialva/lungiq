@@ -40,7 +40,7 @@ if not os.path.exists(MODEL_PATH):
 
 if not os.path.exists(ENCODER_PATH):
     print("Downloading label encoder...")
-    gdown.download(f"https://drive.google.com/file/d/1hkItbQXPJANGmPF3LCVRfpUgjl__3izB/view?usp=sharing}", ENCODER_PATH, quiet=False)
+    gdown.download(f"https://drive.google.com/file/d/1hkItbQXPJANGmPF3LCVRfpUgjl__3izB/view?usp=sharing", ENCODER_PATH, quiet=False)
 
 # Load Model
 model = load_model(MODEL_PATH)
