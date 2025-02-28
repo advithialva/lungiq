@@ -17,12 +17,6 @@ client = MongoClient(mongo_uri)
 db = client['LungIQ']
 contacts_collection = db['contact']
 
-# # Load your pre-trained model and label encoder
-# model_path = os.path.join(os.getcwd(), "models", "CNN_Covid19_Xray_Version.h5")
-# model = load_model(model_path)
-# le_path = os.path.join(os.getcwd(), "models", "Label_encoder.pkl")
-# le = pickle.load(open(le_path, 'rb'))
-
 # Google Drive File IDs (Direct Download Links)
 MODEL_ID = "1nf7gW58ecTytqk43EnjY397CTxcsaWOB"
 ENCODER_ID = "1hkItbQXPJANGmPF3LCVRfpUgjl__3izB"
