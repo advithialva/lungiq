@@ -23,8 +23,8 @@ contacts_collection = db['contact']
 # le = pickle.load(open(le_path, 'rb'))
 
 # Google Drive File IDs
-MODEL_ID = "your_model_file_id_here"  # Replace with actual file ID
-ENCODER_ID = "your_encoder_file_id_here"
+MODEL_ID = "1nf7gW58ecTytqk43EnjY397CTxcsaWOB" 
+ENCODER_ID = "1hkItbQXPJANGmPF3LCVRfpUgjl__3izB"
 
 # Paths to store model and encoder
 MODEL_PATH = "models/CNN_Covid19_Xray_Version.h5"
@@ -36,11 +36,11 @@ os.makedirs("models", exist_ok=True)
 # Download files if they don't exist
 if not os.path.exists(MODEL_PATH):
     print("Downloading model...")
-    gdown.download(f"https://drive.google.com/uc?id={MODEL_ID}", MODEL_PATH, quiet=False)
+    gdown.download(f"https://drive.google.com/file/d/1nf7gW58ecTytqk43EnjY397CTxcsaWOB/view?usp=sharing", MODEL_PATH, quiet=False)
 
 if not os.path.exists(ENCODER_PATH):
     print("Downloading label encoder...")
-    gdown.download(f"https://drive.google.com/uc?id={ENCODER_ID}", ENCODER_PATH, quiet=False)
+    gdown.download(f"https://drive.google.com/file/d/1hkItbQXPJANGmPF3LCVRfpUgjl__3izB/view?usp=sharing}", ENCODER_PATH, quiet=False)
 
 # Load Model
 model = load_model(MODEL_PATH)
