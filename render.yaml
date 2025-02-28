@@ -3,9 +3,10 @@ services:
     name: lungiq-app
     env: python
     plan: free
-    buildCommand: ""
-    startCommand: "python app.py"
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn -b 0.0.0.0:$PORT app:app"
     envVars:
       - key: MONGODB_URI
-        value: "mongo_uri = os.getenv("MONGODB_URI", "mongodb://localhost:27017/")
-client = MongoClient(mongo_uri)
+        value: "mongodb://localhost:27017/"
+      - key: PORT
+        value: "10000"
