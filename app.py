@@ -9,7 +9,7 @@ from tensorflow.keras.models import load_model
 from werkzeug.utils import secure_filename
 
 # Initialize Flask app
-app = Flask(__name__,static_folder='models')
+app = Flask(__name__,static_folder='static')
 
 # MongoDB connection
 mongo_uri = os.getenv("MONGODB_URI", "mongodb://localhost:27017/")
