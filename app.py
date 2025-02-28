@@ -4,6 +4,7 @@ import cv2
 import numpy as np
 import os
 import pickle
+import gdown
 from tensorflow.keras.models import load_model
 from werkzeug.utils import secure_filename
 
@@ -22,25 +23,35 @@ contacts_collection = db['contact']
 # le_path = os.path.join(os.getcwd(), "models", "Label_encoder.pkl")
 # le = pickle.load(open(le_path, 'rb'))
 
-# Google Drive File IDs
-MODEL_ID = "1nf7gW58ecTytqk43EnjY397CTxcsaWOB" 
+# Google Drive File IDs (Direct Download Links)
+MODEL_ID = "1nf7gW58ecTytqk43EnjY397CTxcsaWOB"
 ENCODER_ID = "1hkItbQXPJANGmPF3LCVRfpUgjl__3izB"
 
-# Paths to store model and encoder
-MODEL_PATH = "models/CNN_Covid19_Xray_Version.h5"
-ENCODER_PATH = "models/Label_encoder.pkl"
+MODEL_URL = f"https://drive.google.com/uc?id={MODEL_ID}"
+ENCODER_URL = f"https://drive.google.com/uc?id={ENCODER_ID}"
 
-# Ensure model directory exists
-os.makedirs("models", exist_ok=True)
+# Paths for model and encoder (store in /tmp to persist in Render)
+MODEL_PATH = "/tmp/CNN_Covid19_Xray_Version.h5"
+ENCODER_PATH = "/tmp/Label_encoder.pkl"
 
-# Download files if they don't exist
+# Ensure the /tmp directory exists
+os.makedirs("/tmp", exist_ok=True)
+
+# Download model and encoder if they don’t exist
 if not os.path.exists(MODEL_PATH):
     print("Downloading model...")
-    gdown.download(f"https://drive.google.com/file/d/1nf7gW58ecTytqk43EnjY397CTxcsaWOB/view?usp=sharing", MODEL_PATH, quiet=False)
+    gdown.download(MODEL_URL, MODEL_PATH, quiet=False)
 
 if not os.path.exists(ENCODER_PATH):
     print("Downloading label encoder...")
-    gdown.download(f"https://drive.google.com/file/d/1hkItbQXPJANGmPF3LCVRfpUgjl__3izB/view?usp=sharing", ENCODER_PATH, quiet=False)
+    gdown.download(ENCODER_URL, ENCODER_PATH, quiet=False)
+
+# Ensure model files exist before loading
+if not os.path.exists(MODEL_PATH):
+    raise FileNotFoundError(f"Model file not found at {MODEL_PATH}")
+
+if not os.path.exists(ENCODER_PATH):
+    raise FileNotFoundError(f"Label encoder file not found at {ENCODER_PATH}")
 
 # Load Model
 model = load_model(MODEL_PATH)
@@ -50,7 +61,7 @@ with open(ENCODER_PATH, "rb") as f:
     le = pickle.load(f)
 
 # Path to store uploaded images
-UPLOAD_FOLDER = 'uploads'
+UPLOAD_FOLDER = '/tmp/uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
