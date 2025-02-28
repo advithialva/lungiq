@@ -16,11 +16,38 @@ client = MongoClient(mongo_uri)
 db = client['LungIQ']
 contacts_collection = db['contact']
 
-# Load your pre-trained model and label encoder
-model_path = os.path.join(os.getcwd(), "models", "CNN_Covid19_Xray_Version.h5")
-model = load_model(model_path)
-le_path = os.path.join(os.getcwd(), "models", "Label_encoder.pkl")
-le = pickle.load(open(le_path, 'rb'))
+# # Load your pre-trained model and label encoder
+# model_path = os.path.join(os.getcwd(), "models", "CNN_Covid19_Xray_Version.h5")
+# model = load_model(model_path)
+# le_path = os.path.join(os.getcwd(), "models", "Label_encoder.pkl")
+# le = pickle.load(open(le_path, 'rb'))
+
+# Google Drive File IDs
+MODEL_ID = "your_model_file_id_here"  # Replace with actual file ID
+ENCODER_ID = "your_encoder_file_id_here"
+
+# Paths to store model and encoder
+MODEL_PATH = "models/CNN_Covid19_Xray_Version.h5"
+ENCODER_PATH = "models/Label_encoder.pkl"
+
+# Ensure model directory exists
+os.makedirs("models", exist_ok=True)
+
+# Download files if they don't exist
+if not os.path.exists(MODEL_PATH):
+    print("Downloading model...")
+    gdown.download(f"https://drive.google.com/uc?id={MODEL_ID}", MODEL_PATH, quiet=False)
+
+if not os.path.exists(ENCODER_PATH):
+    print("Downloading label encoder...")
+    gdown.download(f"https://drive.google.com/uc?id={ENCODER_ID}", ENCODER_PATH, quiet=False)
+
+# Load Model
+model = load_model(MODEL_PATH)
+
+# Load Label Encoder
+with open(ENCODER_PATH, "rb") as f:
+    le = pickle.load(f)
 
 # Path to store uploaded images
 UPLOAD_FOLDER = 'uploads'
@@ -112,4 +139,6 @@ def upload_file():
                                confidence_score=confidence_score)
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
+    port = int(os.environ.get("PORT", 10000)) 
+    app.run(host='0.0.0.0', port=port)
+
