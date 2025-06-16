@@ -100,10 +100,5 @@ http://127.0.0.1:5000/
 
 You can now use the LungIQ web app!
 
-## Contributors
-<a href="https://github.com/Advithi-Alva/lungiq/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Advithi-Alva/lungiq" />
-</a>
-
 <br />
 <br />
