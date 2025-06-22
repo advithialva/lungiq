@@ -1,4 +1,4 @@
-# LungIQ: Lung Disease Prediction  
+# LungIQ: CNN-based Lung Health Diagnosis System  
 
 <table>
 <tr>
