@@ -12,7 +12,7 @@
 </table>
 
 ## Features
-- **📸 Image-Based Disease Prediction**:   
+- **📸 Image-Based Disease Detection**:   
   Upload X-ray images of the lungs to receive accurate predictions about the presence of pneumonia, COVID-19, or a normal lung condition.
 
 - **🤖 Advanced AI Technology**:   
@@ -32,7 +32,7 @@ Capture a clear, high-quality X-ray image of the patient's lungs. Ensure the ima
 Easily upload the X-ray image to Luniq's platform. The uploaded image is processed through an advanced deep learning model that detects and classifies the condition of the lungs.
 
 ### 3. Wait for the Results  
-Once the image is processed, LungIQ provides the prediction result, indicating whether the X-ray shows signs of pneumonia, COVID-19, or normal lung conditions.
+Once the image is processed, LungIQ provides the detection result, indicating whether the X-ray shows signs of pneumonia, COVID-19, or normal lung conditions.
 
 
 
